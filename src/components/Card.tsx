@@ -12,8 +12,7 @@ const Card: React.FC<CardProps> = ({song}) => {
 
   const { dominantColor } =  useExtractColors(song.image, {format: 'hex'});
   
-  const handleClick = () => {    
-    console.log("1",song)
+  const handleClick = () => {
     if (dominantColor) {
       setBackgroundColor(dominantColor)
     }

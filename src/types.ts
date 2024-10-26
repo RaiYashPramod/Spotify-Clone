@@ -17,41 +17,41 @@ export interface Song {
   artistMap: ArtistMap;
   cache_state: string;
   copyright_text: string;
-  duration: string; // In seconds
+  duration: string; 
   encrypted_drm_media_url: string;
   encrypted_media_path: string;
   encrypted_media_url: string;
-  explicit_content: number; // 0 or 1
+  explicit_content: number; 
   featured_artists: string;
   featured_artists_id: string;
-  has_lyrics: string; // "true" or "false"
-  id: string; // Unique identifier for the song
-  image: string; // URL to the album artwork
+  has_lyrics: string; 
+  id: string; 
+  image: string; 
   is_dolby_content: boolean;
-  is_drm: number; // 0 or 1
+  is_drm: number; 
   label: string;
   label_url: string;
   language: string;
   lyrics_snippet: string;
   media_preview_url: string;
-  media_url: string; // Direct link to the media file
-  music: string; // Composers
-  music_id: string; // Composers IDs
+  media_url: string; 
+  music: string; 
+  music_id: string; 
   origin: string;
-  perma_url: string; // Permanent link to the song
-  play_count: number; // Total number of plays
-  primary_artists: string; // Main artists
-  primary_artists_id: string; // IDs of main artists
-  release_date: string; // ISO date string
-  rights: Rights; // Rights information
-  singers: string; // Additional singers
-  song: string; // Song title
-  starred: string; // "true" or "false"
-  starring: string; // Actors featured in the music video
+  perma_url: string; 
+  play_count: number; 
+  primary_artists: string; 
+  primary_artists_id: string; 
+  release_date: string; 
+  rights: Rights; 
+  singers: string; 
+  song: string; 
+  starred: string; 
+  starring: string; 
   triller_available: boolean;
   type: string;
-  webp: boolean; // Whether the image is in WebP format
-  year: string; // Year of release
+  webp: boolean; 
+  year: string; 
 }
 
 export interface Album {
@@ -97,5 +97,5 @@ export interface Playlist {
 }
 
 
-// Response type
-export type ApiResponse = Song[]; // Array of songs
+
+export type ApiResponse = Song[]; 
