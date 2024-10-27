@@ -20,8 +20,8 @@ const Card: React.FC<CardProps> = ({song}) => {
   }
 
   return (
-    <div className="p-4 rounded-lg flex flex-row gap-2 transition-colors duration-300 ease-in-out hover:bg-white/20" onClick={handleClick}>
-      <div className="flex-shrink-0 w-14 h-14 rounded-full relative overflow-hidden">
+    <div className="p-2 rounded-lg flex flex-row gap-2 transition-colors duration-300 ease-in-out hover:bg-white/20" onClick={handleClick}>
+      <div className="flex-shrink-0 w-12 h-12 rounded-full relative overflow-hidden">
           <img
             src={song.image}
             alt={`${song.album}'s album cover`}
@@ -29,8 +29,8 @@ const Card: React.FC<CardProps> = ({song}) => {
           />
       </div>
       <div className=''>
-        <h2 className="text-white text-xl font-normal transition-colors duration-300 ease-in-out group-hover:text-green-500">{song.song}</h2>
-        <p className="text-gray-400 text-lg truncate max-w-96">{Object.keys(song.artistMap).join(', ')}</p>
+        <h2 className="text-white text-md md:text-md font-normal transition-colors duration-300 ease-in-out group-hover:text-green-500">{song.song}</h2>
+        <p className="text-gray-400 text-xs md:text-sm truncate max-w-64">{Object.keys(song.artistMap).join(', ')}</p>
       </div>
     </div>
   )
