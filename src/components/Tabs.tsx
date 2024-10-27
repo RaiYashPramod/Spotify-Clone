@@ -7,7 +7,7 @@ interface TabProps {
 
 const Tabs: React.FC<TabProps> = ({ selectedTab, onSelectTab }) => {
   return (
-    <div className="flex gap-4 py-4">
+    <div className="flex gap-4 py-2 md:py-4">
       <button
         className={`font-semibold text-xl ${selectedTab === 'forYou' ? 'text-white' : 'text-white/60'}`}
         onClick={() => onSelectTab('forYou')}

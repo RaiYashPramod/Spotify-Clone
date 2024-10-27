@@ -62,11 +62,15 @@ const Player = () => {
   return (
     <div className="h-full w-full">
       {currentTrack ? (
-        <div className="flex flex-col justify-center items-center h-full -mt-28">
-          <h3 className="text-3xl font-bold text-white p-10">Now Playing</h3>
-          <img src={currentTrack.image} alt="" className="h-80 w-80" />
-          <h2 className="text-white pt-4 text-3xl">{currentTrack.song}</h2>
-          <p className="text-gray-400 text-lg truncate max-w-96">{Object.keys(currentTrack.artistMap).join(', ')}</p>
+        <div className="flex flex-col justify-center items-center h-full mt-4 md:-mt-16">
+          <h3 className="hidden lg:block text-3xl font-bold text-white p-10">Now Playing</h3>
+          <div className="flex flex-row md:flex-col gap-2">
+            <img src={currentTrack.image} alt="" className="h-28 w-28 md:h-80 md:w-80 object-cover" />
+            <div>
+              <h2 className="text-white pt-4 text-md md:text-3xl">{currentTrack.song}</h2>
+              <p className="text-gray-400 text-xs md:text-lg truncate max-w-48 md:max-w-80">{Object.keys(currentTrack.artistMap).join(', ')}</p>
+            </div>
+          </div>
           <audio src={currentTrack.media_url}></audio>
           <div className="w-full flex justify-center items-center mt-4">
             <div className="flex flex-row gap-2 w-96 items-center">
@@ -81,9 +85,9 @@ const Player = () => {
             </div>
           </div>
 
-          <div className="flex flex-row items-center justify-center gap-12 mt-4">
+          <div className="flex flex-row items-center justify-center gap-8 mt-4">
             <IoPlaySkipBack size={24} color="white"/>
-            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center" onClick={handlePlayPause}>
+            <div className="bg-white h-14 w-14 rounded-full flex items-center justify-center" onClick={handlePlayPause}>
               <button className="focus:outline-none">
                 {isPlaying ? <FaPause /> : <FaPlay />}
               </button>
